@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "839141425536",
+    "firebase_url": "https://servidorquestionari-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "servidorquestionari",
+    "storage_bucket": "servidorquestionari.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839141425536:android:33ec0a3795a24bd5bc0165",
+        "android_client_info": {
+          "package_name": "com.example.clientecuestionario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839141425536-33f1huhg54i9jm0eb9r0i8hl9mrc4g7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-TXnALcviCzeiViiWu3KmbFyFYD3VBVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839141425536-33f1huhg54i9jm0eb9r0i8hl9mrc4g7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839141425536:android:210c43b04e51c2f5bc0165",
+        "android_client_info": {
+          "package_name": "com.example.servidorcuestionario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839141425536-33f1huhg54i9jm0eb9r0i8hl9mrc4g7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-TXnALcviCzeiViiWu3KmbFyFYD3VBVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839141425536-33f1huhg54i9jm0eb9r0i8hl9mrc4g7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

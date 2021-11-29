@@ -7,12 +7,30 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/txtNomEquip"
+        android:layout_width="186dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="415dp"
+        android:layout_marginBottom="71dp"
+        android:text="Entra nom equip"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/txtNomEquip2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNomEquip2"
+        android:layout_width="186dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="145dp"
+        android:text="Entra ID partida"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomEquip" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
