@@ -6,31 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtNomEquip"
-        android:layout_width="186dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="415dp"
-        android:layout_marginBottom="71dp"
-        android:text="Entra nom equip"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomEquip2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtNomEquip2"
-        android:layout_width="186dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="145dp"
-        android:text="Entra ID partida"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="92dp"
+        android:text="ENVIAR"
+        android:onClick="btnEnviar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomEquip" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIDPartida" />
+
+    <EditText
+        android:id="@+id/txtIDPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="230dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtinfoIDPartida" />
+
+    <TextView
+        android:id="@+id/txtinfoIDPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="ID PARTIDA:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtIDPartida"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
