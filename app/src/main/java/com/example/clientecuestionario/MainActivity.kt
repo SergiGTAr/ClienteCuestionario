@@ -1,27 +1,39 @@
 package com.example.clientecuestionario
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 
 class MainActivity : AppCompatActivity() {
+    var idPartidaServidor: String = ""
+    var idPartidaServer: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
     fun btnEnviar(view: View) {
+        var coincideixID = false
+        val txtIDPartida = findViewById<TextView>(R.id.txtIDPartida)
         val dbinstance = FirebaseDatabase.getInstance("https://servidorquestionari-default-rtdb.europe-west1.firebasedatabase.app")
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("partida")
-        val id = myRef.child("id").getValue()
+        val database = dbinstance.getReference("")
+        database.child("partida").child("id").get().addOnSuccessListener {
+            if(it.value.toString() == txtIDPartida.text.toString()) {
+                coincideixID = true
+            }
+            Log.i("firebase", "Got value ${it.value}")
+        }.addOnFailureListener{
+            Log.e("firebase", "Error getting data", it)
+        }
+        if(coincideixID){
+            Toast.makeText(this, "Conté el valor", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "No conté el valor", Toast.LENGTH_SHORT).show()
+        }
     }
 }

@@ -4,40 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#800BF8DC"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblNomEquip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="71dp"
+        android:text="NOM EQUIP:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lblIDPartida"
+        app:layout_constraintEnd_toStartOf="@+id/txtNomEquip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnEnviar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:layout_marginBottom="92dp"
-        android:text="ENVIAR"
+        android:layout_width="179dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="119dp"
         android:onClick="btnEnviar"
+        android:text="CONNECTAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIDPartida" />
+        app:layout_constraintTop_toBottomOf="@+id/lblIDPartida" />
 
     <EditText
         android:id="@+id/txtIDPartida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="230dp"
+        android:layout_marginEnd="11dp"
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtinfoIDPartida" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/lblIDPartida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblIDPartida" />
 
-    <TextView
-        android:id="@+id/txtinfoIDPartida"
+    <EditText
+        android:id="@+id/txtNomEquip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="11dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/lblNomEquip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNomEquip" />
+
+    <TextView
+        android:id="@+id/lblIDPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="63dp"
         android:text="ID PARTIDA:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtIDPartida"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnviar"
+        app:layout_constraintEnd_toStartOf="@+id/txtIDPartida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNomEquip" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
