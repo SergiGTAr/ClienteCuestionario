@@ -3,6 +3,7 @@ package com.example.clientecuestionario
 import android.os.Bundle
 import android.view.View
 import android.view.View.INVISIBLE
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -138,7 +139,15 @@ class MainActivity : AppCompatActivity() {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     val estat = dataSnapshot.getValue(String::class.java)
                     if (estat == "encurs") {
-                        partidaIniciada(postReference)
+                        setContentView(R.layout.quiz)
+                        val btnX = findViewById<Button>(R.id.btnX)
+                        val btnY = findViewById<Button>(R.id.btnY)
+                        btnX.setOnClickListener {
+                            btnX(postReference)
+                        }
+                        btnY.setOnClickListener {
+                            btnY(postReference)
+                        }
                     }
                 }
 
@@ -148,6 +157,7 @@ class MainActivity : AppCompatActivity() {
             })
     }
 
+/*
     private fun partidaIniciada(dbReference: DatabaseReference) {
 
         dbReference.child("partides").child(idPartidaActual).child("estatpartida")
@@ -155,7 +165,6 @@ class MainActivity : AppCompatActivity() {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     val estat = dataSnapshot.getValue(String::class.java)
                     if (estat == "encurs") {
-                        setContentView(R.layout.quiz)
 
                     }
                 }
@@ -164,5 +173,16 @@ class MainActivity : AppCompatActivity() {
                     // Do something
                 }
             })
+    }
+*/
+
+    fun btnX(database: DatabaseReference){
+            database.child("partides").child(idPartidaActual).child("equips").child(NomEquip).child("Vot").setValue("X")
+            database.child("partides").child(idPartidaActual).child("equips").child(NomEquip).child("HaVotat").setValue("1")
+    }
+
+    fun btnY(database: DatabaseReference){
+            database.child("partides").child(idPartidaActual).child("equips").child(NomEquip).child("Vot").setValue("Y")
+            database.child("partides").child(idPartidaActual).child("equips").child(NomEquip).child("HaVotat").setValue("1")
     }
 }
